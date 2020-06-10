@@ -1,0 +1,23 @@
+[package]
+name = "react-wasm"
+version = "0.1.0"
+authors = ["SirCipher tklapwijk@protonmail.com"]
+edition = "2018"
+description = "React WASM Rust example"
+license = "Apache 2.0"
+repository = "https://github.com/SirCipher/react-wasm"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.63"
+console_error_panic_hook = "0.1.6"
+wasm-bindgen-futures = "0.4.13"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+opt-level = "s"
+lto = true
